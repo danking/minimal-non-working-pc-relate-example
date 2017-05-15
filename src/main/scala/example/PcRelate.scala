@@ -28,7 +28,7 @@ object PcRelate {
       case ((i, s), 0.0) => mu_is_clipped(i, s)
       case ((i, s), 1.0) => 0.0
       case ((i, s), 2.0) => 1.0 - mu_is_clipped(i, s)
-      case ((i, s), j) => throw new RuntimeException(s"Individual $s at snp $s has a genotype other than 0, 1, or 2: $j")
+      case ((i, s), j) => throw new RuntimeException(s"Individual $i at snp $s has a genotype other than 0, 1, or 2: $j")
     }
 
     val k2 = for (i <- 0 until 4)
